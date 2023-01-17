@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import {
   HomeOutlined,
   MoneyCollectOutlined,
-  BulbOutlined,
   FundOutlined,
   MenuOutlined,
 } from "@ant-design/icons";
@@ -20,7 +19,6 @@ const Navbar = () => {
     handleResize();
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
   useEffect(() => {
     if (screenSize < 768) {
       setActiveMenu(false);
@@ -66,7 +64,14 @@ const Navbar = () => {
     key: "NewsMenu",
   };
   const itemMenus = [homeMenu, cryptocurrenciesMenu, exchangesMenu, newsMenu];
-  const menuHeader = <Menu selectedKeys={[]} items={itemMenus} theme="dark" className="nav-menu"/>;
+  const menuHeader = (
+    <Menu
+      selectedKeys={[]}
+      items={itemMenus}
+      theme="dark"
+      className="nav-menu"
+    />
+  );
 
   return (
     <div className="nav-container">
@@ -76,7 +81,10 @@ const Navbar = () => {
           <Typography.Title level={2} className="logo">
             <Link to="/">Cryptoverse</Link>
           </Typography.Title>
-          <Button className="menu-control-container" onClick={()=> setActiveMenu(!activeMenu)}>
+          <Button
+            className="menu-control-container"
+            onClick={() => setActiveMenu(!activeMenu)}
+          >
             <MenuOutlined />
           </Button>
         </div>

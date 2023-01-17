@@ -106,7 +106,9 @@ a:hover{
         flex-direction: column;
         overflow: hidden;
     }
-
+    .ml-10-media {
+    padding-right: 10px;
+    }
     .navbar{
         flex: 1;
     }
@@ -369,6 +371,7 @@ width: 70%;
 .ml-10 {
     margin-left: -10px;
 }
+
 .search-crypto{
     margin: 20px auto 30px auto;
     width: 250px;

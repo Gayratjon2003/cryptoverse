@@ -13,7 +13,9 @@ const Exchanges = () => {
     <>
       <Row>
         <Col span={8}>Exchanges</Col>
-        <Col span={8}>24h Trade Volume</Col>
+        <Col span={8} className="ml-10-media">
+          24h Trade Volume
+        </Col>
         <Col span={8} className="ml-10">
           Markets
         </Col>
