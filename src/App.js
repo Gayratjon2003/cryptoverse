@@ -21,7 +21,7 @@ function App() {
           <div className="routes">
             <Routes>
               <Route exact path="/" element={<Homepage />}></Route>
-              <Route exact path="/exchanges" element={<Exchanges />}></Route>
+              <Route path="/exchanges" element={<Exchanges />}></Route>
               <Route
                 exact
                 path="/cryptocurrencies"
@@ -37,21 +37,20 @@ function App() {
           </div>
         </Layout>
         <div className="footer">
-        <Typography.Title
-          level={5}
-          style={{ color: "white", textAlign: "center" }}
-        >
-          Cryptoverse <br />
-          All right reserverd
-        </Typography.Title>
-        <Space>
-          <Link to="/">Home</Link>
-          <Link to="/exchanges">Exchanges</Link>
-          <Link to="/news">News</Link>
-        </Space>
+          <Typography.Title
+            level={5}
+            style={{ color: "white", textAlign: "center" }}
+          >
+            Cryptoverse <br />
+            All right reserverd
+          </Typography.Title>
+          <Space>
+            <Link to="/">Home</Link>
+            <Link to="/exchanges">Exchanges</Link>
+            <Link to="/news">News</Link>
+          </Space>
+        </div>
       </div>
-      </div>
-      
     </div>
   );
 }
